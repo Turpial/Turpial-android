@@ -1,0 +1,15 @@
+#General ignore
+.metadata
+.classpath
+.project
+.settings
+proguard.cfg
+gen/
+bin/
+*~
+project.properties
+
+#Ant ignore
+build.xml
+local.properties
+proguard-project.txt
