@@ -6,7 +6,13 @@ Android version of Turpial, Twitter and Identi.ca client. Light, fast and fully 
 Clone the common part
 ---------------------
 
-Turpial for Android needs the common part built using Phonegap, so before building all you need to clone Turpial-mobile repository into assets/www.
+Turpial for Android needs the common part built using Phonegap, so before building all you need to clone Turpial-mobile repository into "assets" folder typing something like this:
+
+	git clone Your-Turpial-mobile.git www
+
+For example:
+
+	git clone git@github.com:Turpial/Turpial-mobile.git www
 
 How to build it:
 ----------------
