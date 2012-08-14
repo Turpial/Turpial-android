@@ -2,7 +2,7 @@
 #
 #                            YMCA - You Make Cool Apps
 #_______________________________________________________________________________
-#                                                                    version 0.2
+#                                                                    version 0.3
 # Author: Andrea Stagi (4ndreaSt4gi)
 # Makefile for building Android apps using Ant
 # License: MIT
@@ -62,6 +62,10 @@ ifneq ($(wildcard YMCA.conf),)
 	include YMCA.conf
 endif
 
+ifdef DEVICE
+	DEVICE_CMD:= -s $(DEVICE)
+endif
+
 all:
     ifdef TARGET
 		@echo "\nUpdating the project..."
@@ -76,9 +80,6 @@ all:
 	ant debug
 
 upload:
-    ifdef DEVICE
-		DEVICE_CMD = " -s "$(DEVICE)
-    endif
 	@echo "\nUploading to device..."
 	$(ANDROID_SDK)/platform-tools/adb $(DEVICE_CMD) install -r ./bin/*debug.apk
 	@echo "\nLaunching the main activity..."
@@ -99,9 +100,7 @@ restartadb:
 	sudo $(ANDROID_SDK)/platform-tools/adb start-server
 
 devices:
-	@echo "\nLIST OF THE AVAILABLE DEVICES"
-	@echo "\n-----------------------------"
-	@echo "\nTODO..."
+	$(ANDROID_SDK)/platform-tools/adb devices
 
 targets:
 	$(ANDROID_SDK)/tools/android list
