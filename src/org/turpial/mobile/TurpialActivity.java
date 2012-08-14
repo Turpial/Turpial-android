@@ -28,7 +28,7 @@ public class TurpialActivity extends DroidGap {
         IntentFilter filter = new IntentFilter(StreamService.ACTION);
         this.registerReceiver(receiver, filter);
         super.onCreate(savedInstanceState);
-        super.loadUrl("file:///android_asset/www/accounts.html");
+        super.loadUrl("file:///android_asset/www/main.html");
     }
     
     public void onStart() {
