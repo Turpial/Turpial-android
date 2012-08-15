@@ -1,12 +1,21 @@
 Turpial for Android
 ===================
 
-Android version of Turpial, Twitter and Identi.ca client. Light, fast and fully functional.
+Android version of Turpial, the Twitter and Identi.ca client, light, fast and fully functional.
+
+How to collaborate
+------------------
+
+Turpial for Android and in general Turpial Mobile is built using Phonegap, a cool framework that allows you to make apps using web technologies, so the main work will take place on the common part mainly (Turpial-mobile repo, take a look at its README first). 
+
+The Android part is used to launch the application and providing a background service to fetch contents.
+
+Any suggestion and patch are welcome, won't be ignored and will be discussed with the whole Turpial team.
 
 Clone the common part
 ---------------------
 
-Turpial for Android needs the common part built using Phonegap, so before building all you need to clone Turpial-mobile repository into "assets" folder typing something like this:
+Turpial for Android requires the common part built using Phonegap, so before start building you need to clone Turpial-mobile repository into "assets" folder typing something like this:
 
 	git clone Your-Turpial-mobile.git www
 
@@ -17,9 +26,13 @@ For example:
 How to build it:
 ----------------
 
-- Install ant
-- Download the Android SDK from http://developer.android.com/sdk/index.html if you don't have it yet.
-- Extract the package somewhere (I placed it in my home directory /home/andrea/android-sdk-linux_x86).
-- Set ANDROID_SDK environment variable with the path where your SDK folder is placed.
+Requires:
+
+- Apache Ant http://ant.apache.org
+- Android SDK http://developer.android.com/sdk
+
+Steps:
+
+- Set ANDROID_SDK environment variable with the path where your Android SDK folder is placed.
 - Run "make" to build the .apk
-- Run "make upload" to launch Turpial on your device. For any problem read the YMCA makefile.
+- Run "make upload" to launch Turpial on your device. For any problem read the YMCA Makefile.
